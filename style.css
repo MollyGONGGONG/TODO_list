@@ -116,10 +116,14 @@ h3,
   background-color: #c94c4c;
 }
 
-.move-btn {
+.move-btn-left {
   background-color: #4caf50;
+  order: -1;
 }
 
+.move-btn-right {
+  background-color: #4caf50;
+}
 svg {
   fill: #f0f0f0;
   pointer-events: none;
