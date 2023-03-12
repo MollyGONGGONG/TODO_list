@@ -37,6 +37,7 @@ h3,
   gap: 10px;
   width: 100%;
   max-width: 1300px;
+  height: 50vh;
 }
 
 .todo-list li input {

@@ -1,44 +1,14 @@
 {
   "todos": [
     {
-      "content": "sing a song!",
-      "isCompleted": true,
-      "id": 24
-    },
-    {
-      "content": "learn",
-      "isCompleted": false,
-      "id": 25
-    },
-    {
-      "content": "eeeee",
-      "isCompleted": false,
-      "id": 26
-    },
-    {
-      "content": "ewrwrew",
-      "isCompleted": false,
-      "id": 27
-    },
-    {
-      "content": "random words",
-      "isCompleted": false,
-      "id": 28
-    },
-    {
       "content": "eat dinner",
-      "isCompleted": false,
+      "isCompleted": true,
       "id": 29
     },
     {
-      "content": "updated",
+      "content": "homework",
       "isCompleted": true,
       "id": 30
-    },
-    {
-      "content": "lalalala",
-      "isCompleted": true,
-      "id": 31
     }
   ]
 }

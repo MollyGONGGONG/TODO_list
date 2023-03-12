@@ -138,6 +138,9 @@ const View = (() => {
     if (todos.length === 0 || todosPendingTemplate === "") {
       todosPendingTemplate = "<h4>no task to display!</h4>";
     }
+    if (todos.length === 0 || todosCompleteTemplate === "") {
+      todosCompleteTemplate = "<h4>no task to display!</h4>";
+    }
     todolistEl.innerHTML = todosPendingTemplate;
     completeListEl.innerHTML = todosCompleteTemplate;
   };
@@ -184,12 +187,16 @@ const Controller = ((view, model) => {
     function editTodo(event) {
       if (event.target.className === "edit-btn") {
         const todoItemEl = event.target.parentNode.querySelector("span");
+        //console.log(todoItemEl);
         const originalContent = todoItemEl.textContent;
         todoItemEl.innerHTML = `<input type='text' value='${originalContent}' />`;
         const inputEl = todoItemEl.querySelector("input");
+        console.log(inputEl);
+
         inputEl.focus();
         inputEl.addEventListener("blur", () => {
           const newContent = inputEl.value;
+          console.log(newContent);
           if (newContent && newContent !== originalContent) {
             const id = event.target.id;
             const updatedTodo = { id: +id, content: newContent };
@@ -224,7 +231,10 @@ const Controller = ((view, model) => {
 
   const handleMove = () => {
     function moveTodo(event) {
-      if (event.target.className === "move-btn-right" || "move-btn-left") {
+      if (
+        event.target.className === "move-btn-right" ||
+        event.target.className === "move-btn-left"
+      ) {
         const id = event.target.id;
         const todo = state.todos.find((todo) => todo.id === Number(id));
         todo.isCompleted = !todo.isCompleted; //isCompleted true or false: toggled
